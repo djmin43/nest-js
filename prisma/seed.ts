@@ -19,3 +19,7 @@ main()
   .finally(async () => {
     await prisma.$disconnect();
   });
+
+// seed command: npx prisma db seed
+// studio command: npx prisma studio
+// migrate command: npx prisma migrate
