@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/bin/node /usr/local/bin/yarn add @prisma/client
+  /usr/local/bin/node /usr/local/bin/yarn add -D ts-node typescript @types/node
 
 PATH: 
   /Users/dongjoonmin/google-cloud-sdk/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/Postgres.app/Contents/Versions/latest/bin:/Users/dongjoonmin/google-cloud-sdk/bin:/opt/homebrew/bin:/opt/homebrew/sbin
@@ -14,7 +14,7 @@ Platform:
   darwin x64
 
 Trace: 
-  Error: EACCES: permission denied, unlink '/Users/dongjoonmin/Desktop/personal-portfolio/nest/node_modules/@prisma/engines-version/index.js'
+  Error: EACCES: permission denied, mkdir '/Users/dongjoonmin/Desktop/personal-portfolio/nest/node_modules/@jest/core/node_modules/@types'
 
 npm manifest: 
   {
@@ -39,11 +39,14 @@ npm manifest:
       "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
       "test:e2e": "jest --config ./test/jest-e2e.json"
     },
+    "prisma": {
+      "seed": "ts-node ./prisma/seed.ts"
+    },
     "dependencies": {
       "@nestjs/common": "^8.0.0",
       "@nestjs/core": "^8.0.0",
       "@nestjs/platform-express": "^8.0.0",
-      "@prisma/client": "3.1.1",
+      "@prisma/client": "^3.1.1",
       "reflect-metadata": "^0.1.13",
       "rimraf": "^3.0.2",
       "rxjs": "^7.2.0"
@@ -796,7 +799,7 @@ Lockfile:
       consola "^2.15.0"
       node-fetch "^2.6.1"
   
-  "@prisma/client@3.1.1":
+  "@prisma/client@^3.1.1":
     version "3.1.1"
     resolved "https://registry.yarnpkg.com/@prisma/client/-/client-3.1.1.tgz#f4012631528049c22d12b212846dcf503db33cfe"
     integrity sha512-8ud8vVFMIg37yrkZ4wPpjKoMxFbCL0Pesq5eyLnag/s0LTKsVEN7ZBIQq9JzWW+AUqOzGKXr2Jt4Sl8xdGI99w==

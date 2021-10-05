@@ -17,15 +17,15 @@ let AppController = class AppController {
         this.appService = appService;
     }
     getHello() {
-        return this.appService.getHello();
+        return this.appService.getAllUsers();
     }
 };
 __decorate([
-    (0, common_1.Header)('Content-Type', 'application/json'),
     (0, common_1.Get)(),
+    (0, common_1.Header)('Content-Type', 'application/json'),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
-    __metadata("design:returntype", Object)
+    __metadata("design:returntype", void 0)
 ], AppController.prototype, "getHello", null);
 AppController = __decorate([
     (0, common_1.Controller)(),

@@ -1,5 +1,4 @@
 export declare class AppService {
-    getHello(): {
-        test: string;
-    };
+    getAllUsers(): Promise<void>;
+    createNewUser(name: any, email: any): Promise<void>;
 }

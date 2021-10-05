@@ -1,17 +1,13 @@
-import { Controller, Get, Header, Body } from '@nestjs/common';
+import { Controller, Get, Header, Post, Body } from '@nestjs/common';
 import { AppService } from './app.service';
 
 @Controller()
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
-  @Header('Content-Type', 'application/json')
   @Get()
-  getHello(): TestObject {
-    return this.appService.getHello();
+  @Header('Content-Type', 'application/json')
+  getHello() {
+    return this.appService.getAllUsers();
   }
-}
-
-interface TestObject {
-  test: string;
 }
