@@ -11,7 +11,7 @@ generator client {
 }
 
 model FruitAndVege {
-  id    Int     @default(autoincrement()) @id
+  id   String @id @default(cuid())
   name String  @unique
   type String
 }
