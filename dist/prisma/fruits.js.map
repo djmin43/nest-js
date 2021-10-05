@@ -1,0 +1,1 @@
+{"version":3,"file":"fruits.js","sourceRoot":"","sources":["../../prisma/fruits.ts"],"names":[],"mappings":";;;AAAa,QAAA,MAAM,GAAG;IACpB;QACE,IAAI,EAAE,QAAQ;QACd,IAAI,EAAE,OAAO;KACd;IACD;QACE,IAAI,EAAE,OAAO;QACb,IAAI,EAAE,OAAO;KACd;CACF,CAAC"}
