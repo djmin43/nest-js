@@ -1,8 +1,14 @@
 import { PrismaClient } from '@prisma/client';
+import { fruits } from './fruits';
+
 const prisma = new PrismaClient();
 
 async function main() {
-  await console.log('hello');
+  for (const fruit of fruits) {
+    await prisma.fruitAndVege.create({
+      data: fruit,
+    });
+  }
 }
 
 main()
