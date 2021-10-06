@@ -11,7 +11,15 @@ generator client {
 }
 
 model FruitAndVege {
-  id   String @id @default(cuid())
-  name String  @unique
-  type String
+  id          String        @id @default(cuid())
+  name        String        @unique
+  type        String
+  HowToChoose HowToChoose[]
+}
+
+model HowToChoose {
+  id          String       @id @default(cuid())
+  furitAndVege        FruitAndVege @relation(fields: [fruitAndVegeId], references: [id])
+  fruitAndVegeId String
+  description String
 }
