@@ -6,17 +6,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.FruitAndVegeModule = void 0;
+exports.FruitAndVegeService = void 0;
 const common_1 = require("@nestjs/common");
-const fruit_and_vege_controller_1 = require("./fruit-and-vege.controller");
-const fruit_and_vege_service_1 = require("./fruit-and-vege.service");
-let FruitAndVegeModule = class FruitAndVegeModule {
+const client_1 = require(".prisma/client");
+const prisma = new client_1.PrismaClient();
+let FruitAndVegeService = class FruitAndVegeService {
+    async getAllFruitAndVege() {
+        const result = await prisma.fruitAndVege.findMany();
+        return result;
+    }
 };
-FruitAndVegeModule = __decorate([
-    (0, common_1.Module)({
-        controllers: [fruit_and_vege_controller_1.FruitAndVegeController],
-        providers: [fruit_and_vege_service_1.FruitAndVegeService],
-    })
-], FruitAndVegeModule);
-exports.FruitAndVegeModule = FruitAndVegeModule;
-//# sourceMappingURL=fruit-and-vege.module.js.map
+FruitAndVegeService = __decorate([
+    (0, common_1.Injectable)()
+], FruitAndVegeService);
+exports.FruitAndVegeService = FruitAndVegeService;
+//# sourceMappingURL=fruit-and-vege.service.js.map

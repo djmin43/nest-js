@@ -8,13 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AppService = void 0;
 const common_1 = require("@nestjs/common");
-const client_1 = require(".prisma/client");
-const prisma = new client_1.PrismaClient();
 let AppService = class AppService {
-    async getAllFruitAndVege() {
-        const result = await prisma.fruitAndVege.findMany();
-        return result;
-    }
 };
 AppService = __decorate([
     (0, common_1.Injectable)()

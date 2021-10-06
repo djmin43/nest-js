@@ -11,14 +11,13 @@ const common_1 = require("@nestjs/common");
 const app_controller_1 = require("./app.controller");
 const app_service_1 = require("./app.service");
 const fruit_and_vege_module_1 = require("./fruit-and-vege/fruit-and-vege.module");
-const fruit_and_vege_1 = require("./fruit-and-vege");
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
     (0, common_1.Module)({
         imports: [fruit_and_vege_module_1.FruitAndVegeModule],
         controllers: [app_controller_1.AppController],
-        providers: [app_service_1.AppService, fruit_and_vege_1.FruitAndVege],
+        providers: [app_service_1.AppService],
     })
 ], AppModule);
 exports.AppModule = AppModule;
