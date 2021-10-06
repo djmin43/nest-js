@@ -6,20 +6,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.AppModule = void 0;
+exports.FruitAndVege = void 0;
 const common_1 = require("@nestjs/common");
-const app_controller_1 = require("./app.controller");
-const app_service_1 = require("./app.service");
-const fruit_and_vege_module_1 = require("./fruit-and-vege/fruit-and-vege.module");
-const fruit_and_vege_1 = require("./fruit-and-vege");
-let AppModule = class AppModule {
+let FruitAndVege = class FruitAndVege {
 };
-AppModule = __decorate([
-    (0, common_1.Module)({
-        imports: [fruit_and_vege_module_1.FruitAndVegeModule],
-        controllers: [app_controller_1.AppController],
-        providers: [app_service_1.AppService, fruit_and_vege_1.FruitAndVege],
-    })
-], AppModule);
-exports.AppModule = AppModule;
-//# sourceMappingURL=app.module.js.map
+FruitAndVege = __decorate([
+    (0, common_1.Injectable)()
+], FruitAndVege);
+exports.FruitAndVege = FruitAndVege;
+//# sourceMappingURL=fruit-and-vege.js.map
