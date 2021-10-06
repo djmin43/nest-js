@@ -11,18 +11,9 @@ const common_1 = require("@nestjs/common");
 const client_1 = require(".prisma/client");
 const prisma = new client_1.PrismaClient();
 let AppService = class AppService {
-    async getAllUsers() {
-        const allUsers = await prisma.user.findMany();
-        console.log(allUsers);
-    }
-    async createNewUser(name, email) {
-        console.log(name, email);
-        await prisma.user.create({
-            data: {
-                name: name,
-                email: email,
-            },
-        });
+    async getAllFruitAndVege() {
+        const result = await prisma.fruitAndVege.findMany();
+        return result;
     }
 };
 AppService = __decorate([
